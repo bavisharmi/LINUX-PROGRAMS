@@ -1,0 +1,17 @@
+ls 
+cp file1 file2 
+cat file2 
+mv file3 file4  
+cat file4 
+wc file1 
+wc -l file1 
+wc -w file1 
+wc -c file1 
+split -3 file1 
+head -3 file1 
+tail -3 file1 
+cmp file1 file2 
+diff file1 file2 
+rm file6 
+rm -r * 
+
