@@ -1,0 +1,10 @@
+echo "Display system hostname"
+hostname
+echo "Display IP address of all network interfaces"
+ip addr show
+echo "Display routing table information"
+ip route
+echo "Display DNS server configuration"
+cat /etc/resolv.conf
+echo "Test netwoek connectivity with a remote host"
+ping -c 4 google.com
