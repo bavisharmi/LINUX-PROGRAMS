@@ -1,0 +1,12 @@
+echo "Display disk usage of all directories in the home folder"
+du -sh ~/*
+echo "Display the top5 largest directories in the system"
+du -sh/*| sort -rh | head -5
+echo "Display the number of files in each directory"
+find /home/it65 -maxdepth l -type d -exec sh -c
+'echo -n"{}:";find "{}" -type f|wc -l'\:
+echo "Display the file system type of each partition"
+df -th/home/it65
+echo "Display free disk space available"
+df -h
+~
