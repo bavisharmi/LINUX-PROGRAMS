@@ -1,0 +1,9 @@
+echo "enter the table number"
+read n
+echo "enter the range"
+read range
+echo "multiplication table for $n upto the range $range"
+for((i=1;i<=range;i++))
+{
+  echo " $i X $n = `expr $n \* $i`" 
+}

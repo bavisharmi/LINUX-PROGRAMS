@@ -1,0 +1,10 @@
+echo "palindrome program"
+echo "*****************"
+echo "kindly enter a string"
+read string
+if [ "$(echo $string | rev)" = "$string" ]
+then
+echo "given string is palindrome"
+else
+echo "given string is not a palindrome"
+fi

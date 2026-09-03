@@ -1,0 +1,22 @@
+echo "fifth program"
+echo “Text Line Filters"
+grep "India" countries.txt
+grep -i "land" countries.txt
+sed -n '/A/p' countries.txt
+echo “Column/Field Filters”
+cut -d',' -f1 countries.txt
+echo “Transform/Modify Filters”
+sed 's/India/Bharat/g' countries.txt
+tr 'a-z' 'A-Z' < countries.txt
+tr ' ' '_' < countries.txt
+echo “Sort/Unique Filters”
+sort countries.txt
+sort -r countries.txt
+uniq countries.txt
+sort countries.txt | uniq -c
+echo “Common Filters”
+head -5 countries.txt
+tail -5 countries.txt
+wc -l countries.txt
+cp countries.txt myworld
+grep "a" countries.txt | sort | head -3

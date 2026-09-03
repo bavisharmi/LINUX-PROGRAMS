@@ -1,0 +1,12 @@
+echo "Pipe"
+cat file1 | tail -3 |head -1
+echo "*********************"
+echo "Redirection"
+echo "Input Redirection"
+ls > hulk
+echo "****************"
+echo "Output Redirection"
+sort < file1
+echo "******************"
+echo "Tee Command"
+cat file1| tail -3 |head -1 | tee mi

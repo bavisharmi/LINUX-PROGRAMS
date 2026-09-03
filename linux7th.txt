@@ -1,0 +1,15 @@
+echo "enter a number"
+read n
+sum=0
+while [ $n -gt 0 ] || [ $sum -gt 9 ]
+do
+  if [ $n -eq 0 ]
+  then
+    n=$sum
+    sum=0
+  fi
+  sd=$((n%10))
+  n=$((n/10))
+  sum=$((sum+sd))
+done
+echo "the sum of the digits = $sum"

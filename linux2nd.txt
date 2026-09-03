@@ -1,0 +1,14 @@
+echo "***********************"
+echo "to find the logname" &LOGNAME
+echo "***********************"
+echo " to find the working shell" $SHELL
+echo "**************************"
+echo "to find the home directory " $HOME
+echo "*******************************"
+echo  "to find the os type"  $OSTYPE
+echo "***************************"
+echo " to find the present working directory" $(pwd)
+echo "*******************************"
+echo "to find the cpu info" $(lscpu)
+echo "***************************"
+echo "to find the free memory space" $(free)
