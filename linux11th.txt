@@ -1,0 +1,34 @@
+echo "Group Info"
+echo "1. Displaying all groups available in system"
+cut -d: -f1 /etc/group
+echo "*****"
+echo "2. Count the total number of groups available"
+wc -l /etc/group
+echo "*****"
+echo "3. Display groups assigned to the current user"
+echo "Enter user name:"
+read name
+if id "$name" &>/dev/null; then
+  groups "$name"
+else
+echo "User '$name' does not exist"
+fi
+echo "******"
+echo "4. Get Group ID of specified group"
+read -p "Enter group name: " gname
+gid=$(getent group "$gname" | cut -d: -f3)
+if [ -n "$gid" ]; then
+  echo "Group ID of '$gname' is: $gid"
+else
+  echo "Group '$gname' does not exist"
+fi
+echo "******"
+echo "5. Users belonging to a Group"
+read -p "Enter Group Name: " mname
+mem=$(getent group "$mname" | cut -d: -f4)
+if [ -n "$mem" ]; then
+  echo "Users in group '$mname':"
+  echo "$mem" | tr ',' '\n'
+else
+  echo "Group '$mname' does not exist"
+fi
